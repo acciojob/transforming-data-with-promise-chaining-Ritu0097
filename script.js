@@ -6,6 +6,7 @@ document.getElementById('btn').addEventListener('click', function() {
         }, 2000);
     });
     promise1.then((result) => {
+        document.getElementById('output').textContent = `Result: ${result}`;
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(result * 2);
@@ -34,5 +35,4 @@ document.getElementById('btn').addEventListener('click', function() {
     }).catch((error) => {
         console.error('An error occurred:', error);
     });
-    document.getElementById('output').textContent = `Result: ${inputValue}`;
 });
